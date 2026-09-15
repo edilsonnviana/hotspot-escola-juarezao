@@ -1,0 +1,339 @@
+:root {
+    --cor-primaria: #005691; 
+    --cor-secundaria: #e71d2b; 
+    --cor-fundo: #f0f2f5;
+    --cor-texto: #333333;
+    --cor-card: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-container {
+    background-color: var(--cor-card);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    border-top: 5px solid var(--cor-primaria);
+}
+
+.logo-wrapper {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.school-title {
+    color: var(--cor-primaria);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.school-subtitle {
+    color: var(--cor-secundaria);
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+h2 {
+    color: var(--cor-texto);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-bottom: 15px;
+}
+
+.login-btn:hover {
+    background-color: #004473;
+}
+
+.alert-error {
+    background-color: #fde8e8;
+    color: #c53030;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    border: 1px solid #f8b4b4;
+    text-align: left;
+}
+
+.footer-links {
+    margin-top: 15px;
+    font-size: 0.85rem;
+}
+
+.footer-links a {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-info {
+    font-size: 0.75rem;
+    color: #777;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+/* --- Estilos Gerais e Responsivos do Painel Administrativo --- */
+body.admin-body {
+    background-color: #f4f7f6; 
+    color: #333; 
+    padding: 10px;
+    display: block; /* Sobrescreve o flex do login se necessário */
+    min-height: 100vh;
+}
+
+.admin-container { 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    background: #fff; 
+    padding: 15px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+}
+
+.admin-header { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    align-items: flex-start; 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 15px; 
+    margin-bottom: 20px; 
+}
+
+@media(min-width: 600px) {
+    .admin-header { 
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+    }
+}
+
+.admin-header h1 { 
+    font-size: 1.3rem; 
+    color: var(--cor-primaria); 
+}
+
+.btn-sair { 
+    background: var(--cor-secundaria); 
+    color: white; 
+    padding: 8px 15px; 
+    border-radius: 6px; 
+    text-decoration: none; 
+    font-size: 0.85rem; 
+    font-weight: bold; 
+    display: inline-block; 
+}
+.btn-sair:hover { 
+    background: #c51421; 
+}
+
+.alert-sucesso { 
+    background: #e6f4ea; 
+    color: #137333; 
+    padding: 10px; 
+    border-radius: 6px; 
+    margin-bottom: 15px; 
+    font-size: 0.9rem; 
+    border: 1px solid #ceead6; 
+}
+
+.form-section { 
+    background: #f9fbfd; 
+    padding: 15px; 
+    border-radius: 8px; 
+    border: 1px solid #e2e8f0; 
+    margin-bottom: 25px; 
+}
+.form-section h3 { 
+    margin-bottom: 12px; 
+    color: #2d3748; 
+    font-size: 1rem; 
+}
+
+.grid-form { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 12px; 
+}
+@media(min-width: 600px) {
+    .grid-form { grid-template-columns: 1fr 1fr; }
+}
+
+.form-group { 
+    margin-bottom: 5px; 
+}
+.form-group.full { 
+    grid-column: span 1; 
+}
+@media(min-width: 600px) {
+    .form-group.full { grid-column: span 2; }
+}
+
+.admin-container select { 
+    width: 100%; 
+    padding: 12px; 
+    border: 2px solid #e0e0e0; 
+    border-radius: 8px; 
+    font-size: 1rem; 
+    background: white;
+}
+.admin-container select:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+.btn-admin { 
+    background: #2b6cb0 !important; 
+}
+.btn-admin:hover { 
+    background: #2c5282 !important; 
+}
+
+.btn-cancelar { 
+    display: block; 
+    text-align: center; 
+    background: #718096; 
+    color: white; 
+    padding: 12px; 
+    border-radius: 6px; 
+    text-decoration: none; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    margin-top: 10px; 
+    width: 100%; 
+}
+.btn-cancelar:hover { 
+    background: #4a5568; 
+}
+
+/* Tabelas Responsivas */
+.table-responsive { 
+    width: 100%; 
+    overflow-x: auto; 
+    margin-top: 10px; 
+    margin-bottom: 25px; 
+}
+.admin-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    min-width: 550px; 
+}
+.admin-table th, .admin-table td { 
+    padding: 10px; 
+    text-align: left; 
+    border-bottom: 1px solid #edf2f7; 
+    font-size: 0.85rem; 
+}
+.admin-table th { 
+    background: #f7fafc; 
+    color: #4a5568; 
+    font-weight: 600; 
+}
+
+.badge-ativo { 
+    background: #c6f6d5; 
+    color: #22543d; 
+    padding: 4px 8px; 
+    border-radius: 4px; 
+    font-size: 0.75rem; 
+    font-weight: bold; 
+}
+.badge-inativo { 
+    background: #fed7d7; 
+    color: #9b2c2c; 
+    padding: 4px 8px; 
+    border-radius: 4px; 
+    font-size: 0.75rem; 
+    font-weight: bold; 
+}
+.acoes-link { 
+    margin-right: 8px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 0.85rem; 
+}
+.acoes-editar { 
+    color: #3182ce; 
+}
+.acoes-status { 
+    color: #d69e2e; 
+}
